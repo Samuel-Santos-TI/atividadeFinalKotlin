@@ -24,7 +24,7 @@ data class Gamer(var nome:String, var email:String) {
     }
 
     init {
-        if (nome.isNullOrBlank()) {
+        if (nome.isBlank()) {
             throw IllegalArgumentException("Nome está em branco")
         }
         this.email = validarEmail()
